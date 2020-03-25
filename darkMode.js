@@ -6,25 +6,45 @@ const mode = document.getElementById("mode");
 const body = document.querySelector("body");
 const main = document.getElementById("main");
 const img = document.getElementById("logo");
+const searchBar = document.getElementById("searchBar");
 
 let MenuOnOff = 0;
 let ModeOnOff = 0;
 
 function handleDarkMode() {
+    const lightDark = "#1C1C1C";
+    const dark = "black";
+    const lightGray = "whitesmoke";
+    const bright = "white";
+
     if(ModeOnOff == 0) {
-        body.style.backgroundColor = "#1C1C1C";
-        main.style.backgroundColor = "black";
-        body.style.color = "white";
-        main.style.color = "white";
+        body.style.backgroundColor = lightDark;
+        main.style.backgroundColor = dark;
+        body.style.color = bright;
+        main.style.color = bright;
         logo.src = "image/logoBlack.png";
+
+        mode.style.backgroundColor = lightDark;
+        mode.style.color = bright;
+
+        searchBar.style.backgroundColor = lightDark;
+
+        mode.innerText = "밝은 테마 적용";
 
         ModeOnOff = 1;
     } else {
-        body.style.backgroundColor = "white";
-        main.style.backgroundColor = "whitesmoke";
-        body.style.color = "black";
-        main.style.color = "black";
+        body.style.backgroundColor = bright;
+        main.style.backgroundColor = lightGray;
+        body.style.color = dark;
+        main.style.color = dark;
         logo.src = "image/logo.png";
+
+        mode.style.backgroundColor=bright;
+        mode.style.color = dark;
+
+        searchBar.style.backgroundColor = bright;
+
+        mode.innerText = "어두운 테마 적용";
 
         ModeOnOff = 0;
     }

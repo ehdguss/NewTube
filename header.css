@@ -65,3 +65,12 @@ body {
         width: 200px;
     }
 }
+
+@media(max-width: 634px) {
+    .search input {
+        width: 120px;
+    }
+    .search {
+        padding-left: 10px;
+    }
+}

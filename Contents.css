@@ -42,6 +42,36 @@
     padding: 22px;
 }
 
+.optionMenu {
+    position: absolute;
+    z-index: 1;
+    bottom: 73px;
+    left: 25px;
+    border: lightgray 1px solid;
+    width: 250px;
+    height: 40px;
+    background-color: white;
+    display: none;
+}
+
+.mode {
+    text-align: center;
+    font-weight: 600;
+    cursor: pointer;
+    width:250px;
+    height: 40px;
+    border-bottom: lightgray 1px solid;
+    transition-duration: 0.5s;
+}
+
+.mode:hover {
+    background-color: whitesmoke;
+}
+
+.mode:active {
+    background-color: lightgray;
+}
+
 /**/
 
 .main-contents {
@@ -52,6 +82,7 @@
 .videos {
     display: flex;
     flex-wrap: wrap;
+    align-items: stretch;
     width: 95%;
     height: 90%;
     padding: 60px 30px 0 30px;
@@ -60,10 +91,11 @@
 }
 
 .video {
-    border: gray 1px solid;
     width: 320px;
     height: 180px;
     margin: 7px;
+    font-size: 16px;
+    font-weight: 500;
 }
 
 .video img {
@@ -78,12 +110,6 @@
 
 .videoTitle {
     line-height: 52px;
-}
-
-
-.video {
-    font-size: 16px;
-    font-weight: 500;
 }
 
 .uploadBtn {
@@ -101,6 +127,12 @@
     border-radius: 17.5px;
     margin: 8px 20px 0 0;
     background-color: lightgray;
+}
+
+.video a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
 }
 
 .videoData {
@@ -136,4 +168,8 @@
         position: absolute;
         bottom: 337px;
     }
+}
+
+.showing {
+	display: block;
 }

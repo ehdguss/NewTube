@@ -1,0 +1,139 @@
+.contents-container {
+    display: grid;
+    grid-template-columns: 1fr 24fr; 
+}
+
+.contents {
+    float: left;
+    width: 75px;
+    height: 94vh;
+}
+
+.controls {
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.controls a {
+    text-decoration: none;
+    color: gray;
+}
+
+.controls i, .optionBtn i {
+    color: rgb(131, 127, 127);
+}
+
+.home, .strong {
+    padding: 22px;
+}
+
+.btnText {
+    padding-top: 5px;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.optionBtn {
+    cursor: pointer;
+    text-align: center;
+    color:gray;
+    position: absolute;
+    bottom: 0px;
+    padding: 22px;
+}
+
+/**/
+
+.main-contents {
+    float:right;
+    background-color: whitesmoke;
+}
+
+.videos {
+    display: flex;
+    flex-wrap: wrap;
+    width: 95%;
+    height: 90%;
+    padding: 60px 30px 0 30px;
+    margin: 10px auto;
+    margin-bottom: 0px;
+}
+
+.video {
+    border: gray 1px solid;
+    width: 320px;
+    height: 180px;
+    margin: 7px;
+}
+
+.video img {
+    width: 320px;
+}
+
+.video .profile {
+    float: left;
+    margin-top: 10px;
+    margin-right: 8px;
+}
+
+.videoTitle {
+    line-height: 52px;
+}
+
+
+.video {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.uploadBtn {
+    float: right;
+    cursor: pointer;
+    padding: 4px 30px 0 0;
+    margin-top: 10px;
+}
+
+.profile {
+    float: right;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    border-radius: 17.5px;
+    margin: 8px 20px 0 0;
+    background-color: lightgray;
+}
+
+.videoData {
+    position: absolute;
+    top: 358px;
+    font-size: 13px;
+    font-weight: 500;
+    color: gray;
+    padding-left: 46px;
+    margin-bottom: 20px;
+}
+
+.channelName {
+    padding-bottom: 2px;
+}
+
+.views {
+    float: left;
+}
+
+.views:after {
+    content: "•";
+    margin: 0 4px;
+}
+
+.uploadTime {
+    float: left;
+}
+
+
+@media(max-height: 290px) {
+    .optionBtn {
+        position: absolute;
+        bottom: 337px;
+    }
+}

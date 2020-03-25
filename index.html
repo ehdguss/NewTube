@@ -2,46 +2,85 @@
 <html lang="ko">
 <head>
     <meta charset="utf-8">
-    <title>Document</title>
-    <link  rel="stylesheet" href="main.css">
+    <title>YouTube</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="image/titleLogo.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link  rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="Contents.css">
 </head>
 
 <body>
-    <div class="top-row">
-        <div class="leftMenu">
+    <header>
+        <div class="top-row">
 
-        </div>
-        <div class="logo">
-            <img src="image/logo.png">
-        </div>
-        <div class="search">
-            <input type="text" placeholder="검색" class="searchBox">
-            <button class="searchBtn">search</button>
-        </div>
-        <div class="menus">
-            <div class="upload">
-
+            <div class="menu">
+                <button class="menuBar"><i class="xi-bars xi-2x"></i></button>
             </div>
-            <div class="profile">
 
+            <div class="logo">
+                <a href="" title="YouTube 홈"><img src="image/logo.png"></a>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="검색" class="searchBar">
+                <button><i class="xi-search"></i></button>
+            </div>
+            <button class="profile"></button>
+            <button class="uploadBtn"><i class="xi-upload xi-2x"></i></button>
+        </div>
+    </header>
+
+    <section class="contents-container">
+        <div class="contents">
+            <div class="controls">
+                <button class="home">
+                    <a href="">
+                        <i class="xi-home xi-2x"></i>
+                        <div class="btnText">홈</div>
+                    </a>
+                </button>
+                <button class="storage">
+                    <a href="">
+                        <i class="xi-folder-open xi-2x"></i>
+                        <div class="btnText">보관함</div>
+                    </a>
+                </button>
+            </div>
+            <div class="option">
+                <button class="optionBtn">
+                    <i class="xi-cog xi-2x"></i>
+                    <div class="btnText">설정</div>
+                </button>
             </div>
         </div>
-    </div>
-    <div class="main">
-        <div class="left-row">
+        
+        <div class="main-contents">
+            <div class="videos">
 
+                <div class="video">
+                    <a href="">
+                        <img src="thumbnail/1.webp">
+                    </a>
+                    <div class="profile"></div>
+                    <div class="videoTitle">의외의 가성비???</div>
+                    <div class="videoData">
+                        <div class="channelName">이잉</div>
+                        <div class="views">100회</div>
+                        <div class="uploadTime">1시간 전</div>
+                    </div>
+                </div>
+
+                <div class="video"></div>
+                <div class="video"></div>
+                <div class="video"></div>
+                <div class="video"></div>
+                <div class="video"></div>
+                <div class="video"></div>
+                <div class="video"></div>
+                <div class="video"></div>
+                <div class="video"></div>
+            </div>
         </div>
-        <div class="videos">
-            <div class="video"></div>
-            <div class="video"></div>
-            <div class="video"></div>
-            <div class="video"></div>
-            <div class="video"></div>
-            <div class="video"></div>
-            <div class="video"></div>
-            <div class="video"></div>
-            <div class="video"></div>
-        </div>
-    </div>
+    </section>
 </body>
 </html>

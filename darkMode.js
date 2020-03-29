@@ -1,68 +1,68 @@
-const optionBtn = document.getElementById("optionBtn");
-const optionMenu = document.getElementById("optionMenu");
+const profileBtn = document.getElementById("profileBtn");
+const profileMenu = document.getElementById("profileMenu");
 const SHOW = "showing";
 
-const mode = document.getElementById("mode");
-const body = document.querySelector("body");
-const main = document.getElementById("main");
-const img = document.getElementById("logo");
-const searchBar = document.getElementById("searchBar");
+const body = document.querySelector("body"),
+    logo = document.getElementById("logo"),
+    searchBar = document.getElementById("searchBar"),
+    searchBtn = document.getElementById("searchBtn"),
+    upload = document.querySelector(".xi-upload"),
+    main = document.getElementById("main"),
+    video = document.querySelectorAll(".videoLink"),
+    mode = document.getElementById("darkMode");
+
+const DARK = "dark",
+    LIGHTDARK = "lightDark",
+    BRIGHT = "bright",
+    DARKBRIGHT = "darkbright";
 
 let MenuOnOff = 0;
 let ModeOnOff = 0;
 
 function handleDarkMode() {
-    const lightDark = "#1C1C1C";
-    const dark = "black";
-    const lightGray = "whitesmoke";
-    const bright = "white";
-
     if(ModeOnOff == 0) {
-        body.style.backgroundColor = lightDark;
-        main.style.backgroundColor = dark;
-        body.style.color = bright;
-        main.style.color = bright;
+        body.classList.add(LIGHTDARK);
         logo.src = "image/logoBlack.png";
-
-        mode.style.backgroundColor = lightDark;
-        mode.style.color = bright;
-
-        searchBar.style.backgroundColor = lightDark;
+        searchBar.classList.add(DARK);
+        searchBtn.classList.add(LIGHTDARK);
+        upload.style.color = "white";
+        main.classList.add(DARK);
+        video.forEach(element => {
+            element.classList.add(DARK);
+        });
+        mode.classList.add(LIGHTDARK);
 
         mode.innerText = "밝은 테마 적용";
-
         ModeOnOff = 1;
     } else {
-        body.style.backgroundColor = bright;
-        main.style.backgroundColor = lightGray;
-        body.style.color = dark;
-        main.style.color = dark;
+        body.classList.remove(LIGHTDARK);
         logo.src = "image/logo.png";
-
-        mode.style.backgroundColor=bright;
-        mode.style.color = dark;
-
-        searchBar.style.backgroundColor = bright;
+        searchBar.classList.remove(DARK);
+        searchBtn.classList.remove(LIGHTDARK);
+        upload.style.color = "black";
+        main.classList.remove(DARK);
+        video.forEach(element => {
+            element.classList.remove(DARK);
+        });
+        mode.classList.remove(LIGHTDARK);
 
         mode.innerText = "어두운 테마 적용";
-
         ModeOnOff = 0;
     }
 }
 
 function handleMenuShow() {
     if(MenuOnOff == 0) {
-        optionMenu.classList.add(SHOW);
+        profileMenu.classList.add(SHOW);
         MenuOnOff = 1;
     } else {
-        optionMenu.classList.remove(SHOW);
+        profileMenu.classList.remove(SHOW);
         MenuOnOff = 0;
     }
-
 }
 
 function inint() {
-    optionBtn.addEventListener("click", handleMenuShow);
+    profileBtn.addEventListener("click", handleMenuShow);
     mode.addEventListener("click", handleDarkMode);
 
 }

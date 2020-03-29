@@ -1,0 +1,27 @@
+@media(max-height: 290px) {
+    .optionBtn {
+        position: absolute;
+        bottom: 337px;
+    }
+}
+
+@media(max-width: 1212px) {
+    .search input {
+        width: 300px;
+    }
+}
+
+@media(max-width: 832px) {
+    .search input {
+        width: 200px;
+    }
+}
+
+@media(max-width: 634px) {
+    .search input {
+        width: 118px;
+    }
+    .search {
+        padding-left: 10px;
+    }
+}

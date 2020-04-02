@@ -3,8 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="image/titleLogo.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <link rel="stylesheet" href="upload.css">
+    <link rel="stylesheet" href="media.css">
 </head>
 <body>
-    sdf
+    <header>
+        <div class="top-row">
+            <div class="menu">
+                <button class="menuBar"><i class="xi-bars xi-2x"></i></button>
+            </div>
+
+            <div class="logo">
+                <a href="index.html" title="YouTube 홈"><img src="image/logo.png" id="logo"></a>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="검색" class="searchBar" id="searchBar">
+                <button id="searchBtn"><i class="xi-search"></i></button>
+            </div>
+            <div class="profile">
+                <button class="profileBtn" id="profileBtn"><img src="https://www.bigstockphoto.com/images/homepage/module-6.jpg"></button>
+                <div class="profileMenu" id="profileMenu">
+                    <div class="profileInfo"></div>
+                    <button class="myChannel"></button>
+                    <button class="darkMode" id="darkMode">어두운 테마 적용</button>
+                    <i class="xi-contrast xi-x"></i>
+                </div>
+            </div>
+            <button class="uploadBtn" id="uploadBtn"><a href="upload.html"><i class="xi-upload xi-2x"></i></a></button>
+        </div>
+    </header>
+
+    <section>
+        <div class="contents">
+            <div class="controls">
+                <button class="home">
+                    <a href="index.html" title="홈">
+                        <i class="xi-home xi-2x"></i>
+                        <div class="btnText">홈</div>
+                    </a>
+                </button>
+                <button class="storage">
+                    <a href="library.html" title="보관함">
+                        <i class="xi-library-video xi-2x"></i>
+                        <div class="btnText">보관함</div>
+                    </a>
+                </button>
+            </div>
+        </div>
+
+        <div class="main-upload"> <!--AJAX 사용하기-->
+            <div class="uploadArea">
+                <p class="uploadText">동영상 업로드</p>
+                <form class="uploadObj">
+                    <i class="xi-file-upload-o xi-5x"></i>
+                    <p>업로드 할 파일을 드래그 앤 드롭하세요</p>
+                    <input type="file" accept = "video/*" id="fileUpload">
+                    <label for="fileUpload">파일 선택</label>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="uploadFile.js"></script>
 </body>
 </html>
